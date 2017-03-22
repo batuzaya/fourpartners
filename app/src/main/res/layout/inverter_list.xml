@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="model"
+            type="com.charpixel.fourthpartnerenergy.Models.PlantDetail">
+
+        </variable>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp"
+            >
+
+            <ImageView
+                android:id="@+id/headerImage"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/inverters"
+                />
+            <TextView
+                android:layout_toRightOf="@id/headerImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="INVERTERS"
+                android:textSize="@dimen/plantDetailHeadingTextSize"
+                android:textStyle="bold"
+
+                />
+        </RelativeLayout>
+
+
+       <android.support.v7.widget.RecyclerView
+           android:id="@+id/inverters"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+       </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+
+</layout>

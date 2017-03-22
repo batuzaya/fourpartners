@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="model"
+            type="com.charpixel.fourthpartnerenergy.Models.PlantDetail">
+
+        </variable>
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_8sdp"
+            android:paddingRight="@dimen/_8sdp"
+            >
+
+            <ImageView
+                android:id="@+id/headerImage"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/solar_irradiation"
+                />
+            <TextView
+                android:layout_toRightOf="@id/headerImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="SOLAR IRRADIATION"
+                android:textSize="@dimen/plantDetailHeadingTextSize"
+                android:textStyle="bold"
+
+                />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/orange_circle"
+                    android:layout_gravity="center_vertical"
+
+                    android:id="@+id/view2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ENERGY TODAY"
+                    android:textSize="@dimen/plantDetailHeadingTextSize"
+                    android:textStyle="bold"
+                    android:textColor="@color/textGray"
+
+                    />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/dotted"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layerType="software" />
+                <TextView
+                    android:id="@+id/energyMeters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="0.06"
+                    android:textSize="@dimen/plantDetailValueTextSize"
+                    android:text="@{model.slideDown.invertersData.get(2).inverters.get(0).powerNow != null ? model.slideDown.invertersData.get(2).inverters.get(0).energyToday : @string/not_available}"
+
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/orange_circle"
+                    android:layout_gravity="center_vertical"
+
+                    android:id="@+id/view3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="POWER NOW"
+                    android:textSize="@dimen/plantDetailHeadingTextSize"
+                    android:textStyle="bold"
+                    android:textColor="@color/textGray"
+
+                    android:id="@+id/textView2" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/dotted"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layerType="software" />
+                <TextView
+                    android:id="@+id/energyInverters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="325"
+                    android:textSize="@dimen/plantDetailValueTextSize"
+                    android:text="@{model.slideDown.invertersData.get(2).inverters.get(0).powerNow != null ? model.slideDown.invertersData.get(2).inverters.get(0).powerNow : @string/not_available}"
+
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</layout>

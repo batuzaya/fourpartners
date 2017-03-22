@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1061772343519",
+    "firebase_url": "https://courier-genie-17496.firebaseio.com",
+    "project_id": "courier-genie-17496",
+    "storage_bucket": "courier-genie-17496.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061772343519:android:cb8cc7ece4eaf317",
+        "android_client_info": {
+          "package_name": "com.charpixel.fourthpartnerenergy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1061772343519-rmo8eqa21pqck9e1phq23od23c046la0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.charpixel.fourthpartnerenergy",
+            "certificate_hash": "113439577BBE2047C5A919C91ED6BD00EBD9073B"
+          }
+        },
+        {
+          "client_id": "1061772343519-poficbehgvldvhvutsaibi3vb7738adn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxvsqWlb2P814vVyXUGw8dDUF-qzMSkT4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1061772343519-poficbehgvldvhvutsaibi3vb7738adn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

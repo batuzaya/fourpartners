@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">Fourth Partner Energy</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="base_api_url">http://private-8a61c-carmudi3.apiary-mock.com/</string>
+    <string name="auth_key">jkjjkxjkjskjxkjksjkxjskjkxjkjskjxksjkkjkxsj</string>
+
+
+    <string name="text_no_data">No Data Found</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="base_url_main_module">carmudiapp.carmudi.com</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="forgot_pass"><u>Forgot Password?</u></string>
+    <string name="facebook_app_id">1254581074613702</string>
+
+    <string name="fb_login_protocol_scheme">fb307949182932005</string>
+    <string name="signUpWithFacebook">SignUp with Facebook</string>
+    <string name="terms_for_message">By clicking submit you agree to Carmudi\'s Terms of Use and Private Policy</string>
+    <string name="register">Register</string>
+    <string name="signUpWithGoogle">SignUp with Google</string>
+    <string name="Make">Make</string>
+    <string name="create_account">Create New Account</string>
+    <string name="already_account">Already have account? Login</string>
+    <string-array name="navigation_drawer_items_array">
+        <item>Connect</item>
+        <item>Fixtures</item>
+        <item>Table</item>
+    </string-array>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="send">SEND</string>
+    <string name="action_send">Send</string>
+    <string name="prompt_message">Message</string>
+    <string name="action_attach">ATTACH</string>
+    <string name="action_capture">CAPTURE IMAGE</string>
+
+    <string name="action_search">Search</string>
+    <string name="model_clicked_pattern">You clicked on %s!</string>
+
+    <string name="username">Enter your username</string>
+    <string name="password">Password</string>
+    <string name="Name">Name</string>
+    <string name="Email">Email</string>
+    <string name="Phone">Phone</string>
+
+    <string name="email">Email</string>
+    <string name="otp">OTP Code</string>
+
+    <string name="reset">Reset</string>
+    <string name="login">LOGIN</string>
+    <string name="forgotPasswordButton">Forgot Password</string>
+    <string name="verifyOtpButton">Verify Otp</string>
+    <string name="email_title">What is your e-mail address?</string>
+    <string name="password_title">Do you have a password?</string>
+    <string name="new_customer">No, I am a new customer.</string>
+    <string name="i_have_a_password">Yes, I have a password:</string>
+    <string name="mandatory_field">Mandatory field</string>
+    <string name="invalid_email">Please provide a valid email address</string>
+    <string name="title_activity_test_login">Sign in</string>
+    <string name="panel_make">PANEL MAKE</string>
+    <string name="not_available">N.A.</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="password_does_not_match">Password does not match</string>
+
+
+
+    <string name="name_mandatory">name is mandatory field</string>
+    <string name="password_mandatory">Password is mandatory field</string>
+    <string name="confirm_password_mandatory">Confirm Password is mandatory field</string>
+    <string name="email_mandatory">email is mandatory field</string>
+    <!--<string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">YOUR_KEY_HERE</string>-->
+
+
+</resources>

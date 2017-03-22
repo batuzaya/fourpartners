@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <variable
+            name="listener"
+            type="com.charpixel.fourthpartnerenergy.PlantListModule.Dialogs.SortPlantsDialog.OnItemClick">
+        </variable>
+        <variable
+            name="model"
+            type="com.charpixel.fourthpartnerenergy.PlantListModule.Dialogs.SortPlantsDialog.sortKeys">
+        </variable>
+
+    </data>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_20sdp">
+
+        <ImageButton
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:srcCompat="@drawable/ic_cancel"
+            android:layout_alignParentEnd="true"
+            />
+
+        <RadioGroup
+            android:id="@+id/sortType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:checkedButton="@+id/asc"
+            >
+
+            <RadioButton
+                android:id="@+id/asc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asc"
+                />
+            <RadioButton
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desc"
+                />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/close"
+            android:orientation="vertical"
+
+            android:layout_alignParentStart="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:onClick="@{view -> listener.onClick(model.name)}"
+
+                >
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/email"
+
+                    />
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="Name"
+                    android:textSize="@dimen/_18sdp"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textGray"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:onClick="@{view -> listener.onClick(model.city)}"
+                >
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/city"
+
+                    />
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="City"
+                    android:textSize="@dimen/_18sdp"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textGray"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:onClick="@{view -> listener.onClick(model.state)}"
+                >
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/state"
+
+                    />
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="State"
+                    android:textSize="@dimen/_18sdp"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textGray"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:onClick="@{view -> listener.onClick(model.capacity)}"
+                >
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/capacity"
+
+                    />
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="Capacity"
+                    android:textSize="@dimen/_18sdp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>
+

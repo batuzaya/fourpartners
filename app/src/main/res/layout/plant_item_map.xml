@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@color/white"
+        android:padding="@dimen/_8sdp"
+
+        >
+        <TextView
+            android:id="@+id/plantName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            tools:text="Big Basket"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15sdp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="@dimen/_6sdp"
+            />
+
+        <ImageView
+            android:id="@+id/globe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/plantName"
+            android:layout_alignBottom="@id/plantName"
+            android:layout_toRightOf="@id/plantName"
+            android:src="@drawable/red_globe"
+
+            />
+        <TextView
+            android:id="@+id/capacity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/plantName"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:gravity="center_vertical"
+            android:layout_alignBottom="@id/markerImage"
+
+            tools:text="200 kW"
+            android:layout_alignEnd="@+id/energyDetails"
+
+            />
+        <TextView
+            android:id="@+id/capacityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/plantName"
+            android:layout_toStartOf="@id/capacity"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:gravity="center_vertical"
+            android:layout_alignBottom="@id/markerImage"
+            android:text="Capacity : "
+            android:textColor="@color/textGray"
+
+            />
+
+
+
+        <LinearLayout
+            android:id="@+id/energyDetails"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:orientation="horizontal"
+
+            android:layout_below="@id/plantName"
+            android:background="#424b54"
+            android:layout_marginTop="@dimen/_8sdp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ET: "
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/white"
+                />
+            <TextView
+                android:id="@+id/energyToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                tools:text="803 kWh @ "
+                />
+
+            <TextView
+                android:id="@+id/energyRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                tools:text="40.2 kWh/kWp"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+
+            android:id="@+id/prText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/energyDetails"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_15sdp"
+            android:text="PR : "
+            android:textColor="@color/textGray"
+            />
+        <TextView
+            android:id="@+id/pr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_toRightOf="@id/prText"
+            android:layout_alignTop="@id/prText"
+            android:textSize="@dimen/_15sdp"
+            tools:text="50 %"
+            />
+        <TextView
+            android:id="@+id/energyLifetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            tools:text="102010"
+            android:layout_alignTop="@id/prText"
+            android:layout_alignEnd="@id/energyDetails"
+            android:textSize="@dimen/_15sdp"
+            />
+        <TextView
+            android:id="@+id/energyLifetimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/prText"
+            android:layout_toLeftOf="@id/energyLifetime"
+            android:text="E L : "
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/_15sdp"
+            />
+
+
+    </RelativeLayout>
+</layout>

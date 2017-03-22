@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="model"
+            type="com.charpixel.fourthpartnerenergy.Models.PlantDetail">
+
+        </variable>
+    </data>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_8sdp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        >
+
+        <ImageView
+            android:id="@+id/headerImage"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/statistics_today"
+            />
+        <TextView
+            android:layout_toRightOf="@id/headerImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="STATISTIC TODAY"
+            android:textSize="@dimen/plantDetailHeadingTextSize"
+            android:textStyle="bold"
+
+            />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:padding="@dimen/_5sdp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_100sdp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/circle2"
+                />
+            <TextView
+                android:id="@+id/tl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{model.slideDown.stat.get(0).value}"
+                android:textSize="@dimen/plantDetailValueTextSize"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{model.slideDown.stat.get(0).key}"
+                android:layout_above="@id/tl"
+                android:textSize="@dimen/plantDetailValueTextSize"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:padding="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_100sdp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/circle2"
+                />
+            <TextView
+                android:id="@+id/kwhkwp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{model.slideDown.stat.get(1).value}"
+                android:textSize="@dimen/plantDetailValueTextSize"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{model.slideDown.stat.get(1).key}"
+                android:layout_above="@id/kwhkwp"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/_5sdp"
+            android:layout_height="@dimen/_100sdp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/circle2"
+                />
+            <TextView
+                android:id="@+id/pr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{model.slideDown.stat.get(2).value}"
+
+
+
+                android:textSize="@dimen/plantDetailValueTextSize"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{model.slideDown.stat.get(2).key}"
+                android:layout_above="@id/pr"
+                android:textSize="@dimen/plantDetailValueTextSize"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
+
+
+</layout>

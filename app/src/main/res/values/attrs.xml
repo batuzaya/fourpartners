@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Circle Image-->
+
+    <declare-styleable name="ShaderImageView">
+    <attr name="square" format="boolean" />
+    <attr name="borderColor" format="color" />
+    <attr name="siBorderWidth" format="dimension" />
+    <attr name="borderAlpha" format="float" />
+    <attr name="foreground" format="integer|reference" />
+    <attr name="circle_radius" format="dimension" />
+    <attr name="triangleHeight" format="dimension" />
+    <attr name="shape" format="integer|reference" />
+    <attr name="strokeMiter" format="dimension" />
+    </declare-styleable>
+
+</resources>

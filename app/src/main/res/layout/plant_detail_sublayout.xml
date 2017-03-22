@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="model"
+            type="com.charpixel.fourthpartnerenergy.Models.PlantDetail">
+
+        </variable>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp"
+            >
+
+            <ImageView
+                android:id="@+id/headerImage"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/plan_details"
+                />
+            <TextView
+                android:layout_toRightOf="@id/headerImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="Plant Details"
+                android:textSize="@dimen/plantSubDetailHeadingTextSize"
+                android:textStyle="bold"
+
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@color/primaryBackgroundColor"
+            >
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NAME"
+                    android:textSize="@dimen/plantSubDetailHeadingTextSize"
+                    android:textStyle="bold"
+                    android:textColor="@color/textGray"
+
+                    android:id="@+id/textView2" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/dotted"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layerType="software" />
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="@{model.plantName}"
+                    android:textSize="@dimen/plantSubDetailValueTextSize"
+
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CAPACITY"
+                    android:textSize="@dimen/plantSubDetailHeadingTextSize"
+                    android:textStyle="bold"
+                    android:textColor="@color/textGray"
+
+                     />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/dotted"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layerType="software" />
+                <TextView
+                    android:id="@+id/capacity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{model.plantCapacity != null ? Integer.toString(model.plantCapacity):Integer.toString(0)}"
+                    tools:text="200"
+                    android:textSize="@dimen/plantSubDetailValueTextSize"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="COMMISSION DATE"
+                    android:textSize="@dimen/plantSubDetailHeadingTextSize"
+                    android:textStyle="bold"
+                    android:textColor="@color/textGray"
+
+                     />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/dotted"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layerType="software" />
+                <TextView
+                    android:id="@+id/comissionDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="4 Apr 2016"
+                    android:text="@{model.commissioningDate}"
+                    android:textSize="@dimen/plantSubDetailValueTextSize"
+
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DATA LOGGING DATE"
+                    android:textSize="@dimen/plantSubDetailHeadingTextSize"
+                    android:textStyle="bold"
+                    android:textColor="@color/textGray"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/dotted"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layerType="software" />
+                <TextView
+                    android:id="@+id/dataLoggingDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="4 Apr 2016"
+                    android:text="@{model.dataLoggingDate}"
+                    android:textSize="@dimen/plantSubDetailValueTextSize"
+
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/panel_make"
+                    android:textSize="@dimen/plantSubDetailHeadingTextSize"
+                    android:textStyle="bold"
+                    android:textColor="@color/textGray"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/dotted"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layerType="software" />
+                <TextView
+                    android:id="@+id/panalModel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="4 Apr 2016"
+                    android:text="@{model.panelMake == null ? @string/not_available : model.panelMake  }"
+                    android:textSize="@dimen/plantSubDetailValueTextSize"
+
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PANEL MODEL"
+                    android:textSize="@dimen/plantSubDetailHeadingTextSize"
+                    android:textStyle="bold"
+                    android:textColor="@color/textGray"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/dotted"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layerType="software" />
+
+                <TextView
+                    android:id="@+id/panelModel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="4 Apr 2016"
+                    android:text="@{model.panelModel == null ? @string/not_available : model.panelModel  }"
+                    android:textSize="@dimen/plantSubDetailValueTextSize"
+
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SITE INCHARGE * INTERNAL"
+                    android:textSize="@dimen/plantSubDetailHeadingTextSize"
+                    android:textStyle="bold"
+                    android:textColor="@color/textGray"
+
+                    android:id="@+id/textView4" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/dotted"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layerType="software" />
+                <TextView
+                    android:id="@+id/siteIncharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="-"
+                    android:textSize="@dimen/plantSubDetailValueTextSize"
+                    android:text="@{model.siteInchargeInternal == null ? @string/not_available : model.siteInchargeInternal  }"
+
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GENERATION GUARENTEED"
+                    android:textSize="@dimen/plantSubDetailHeadingTextSize"
+                    android:textStyle="bold"
+                    android:textColor="@color/textGray"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/dotted"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layerType="software" />
+                <TextView
+                    android:id="@+id/generationGuaranteedText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="-"
+                    android:text="@{model.generationGuaranteed != null ? model.generationGuaranteed : @string/not_available }"
+                    android:textSize="@dimen/plantSubDetailValueTextSize"
+
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</layout>

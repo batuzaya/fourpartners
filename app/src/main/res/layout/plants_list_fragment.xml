@@ -1,0 +1,184 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primaryBackgroundColor"
+        >
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_5sdp"
+            >
+
+
+
+            <ImageView
+                android:id="@+id/calander"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/event_top"
+
+                />
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fourth Partner Energy"
+                android:textStyle="bold"
+                android:layout_toRightOf="@id/calander"
+                android:textSize="@dimen/_15sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                />
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/search"
+                android:layout_toLeftOf="@+id/sortMenu"
+
+                />
+
+            <!--<android.support.v7.widget.SearchView-->
+                <!--android:id="@+id/search"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:iconifiedByDefault="true"-->
+
+                <!--android:layout_toLeftOf="@+id/sortMenu"-->
+                <!--&gt;-->
+
+            <!--</android.support.v7.widget.SearchView>-->
+            <ImageView
+                android:id="@+id/sortMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/options"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+
+                />
+
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/searchBar"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/closeSearchBar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:src="@drawable/back_arrow"
+                />
+            <android.support.v7.widget.SearchView
+                android:id="@+id/searchText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+
+                android:layout_height="@dimen/_40sdp">
+
+            </android.support.v7.widget.SearchView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/currentDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+
+                />
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                </android.support.v7.widget.RecyclerView>
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+            <ProgressBar
+                android:id="@+id/loader"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/emptyListView"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search_result_smiley"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sorry No Result Found For "
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                />
+            <TextView
+                android:id="@+id/searchTextView"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

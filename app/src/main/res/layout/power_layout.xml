@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="model"
+            type="com.charpixel.fourthpartnerenergy.Models.PlantDetail">
+
+        </variable>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingBottom="@dimen/_8sdp"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingLeft="@dimen/_8sdp"
+        android:paddingRight="@dimen/_8sdp"
+
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_2sdp"
+
+            >
+
+            <ImageView
+                android:id="@+id/headerImage"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/energy___power"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:layout_toRightOf="@id/headerImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="POWER"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/power"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_20sdp"
+                android:text="@{model.slideDown.invertersData.get(0).inverters.get(1).powerNow != null ? model.slideDown.invertersData.get(0).inverters.get(1).powerNow + ' '+'K'+'W' : @string/not_available}"
+                tools:text="30 KW"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/_10sdp"
+
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:id="@+id/powerPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_20sdp"
+                android:text="@{model.powerPercentString}"
+                tools:text="20"
+                android:layout_marginEnd="@dimen/_12sdp"
+
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/parantLayout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/primaryBackgroundColor"
+
+            >
+
+            <RelativeLayout
+                android:id="@+id/powerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@color/backgroundBlue"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true">
+
+
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</layout>

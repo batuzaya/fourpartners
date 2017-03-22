@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <variable
+            name="model"
+            type="com.charpixel.fourthpartnerenergy.Models.PlantDetail">
+
+        </variable>
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/headerImage"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/location1"
+                />
+            <TextView
+                android:layout_toRightOf="@id/headerImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="LOCATION"
+                android:textSize="@dimen/plantSubDetailHeadingTextSize"
+                android:textStyle="bold"
+
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@color/primaryBackgroundColor"
+            >
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Line1"
+                    android:textSize="@dimen/plantSubDetailHeadingTextSize"
+                    android:textStyle="bold"
+                    android:textColor="@color/textGray"
+
+                    android:id="@+id/textView2" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/dotted"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layerType="software" />
+                <TextView
+                    android:id="@+id/line1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Address First Line"
+                    android:text="@{model.addressLineOne == null ? @string/not_available : model.addressLineOne  }"
+
+                    android:textSize="@dimen/plantSubDetailValueTextSize"
+
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Line2"
+                    android:textSize="@dimen/plantSubDetailHeadingTextSize"
+                    android:textStyle="bold"
+                    android:textColor="@color/textGray"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/dotted"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layerType="software" />
+
+                <TextView
+                    android:id="@+id/line2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Address Second Line"
+                    android:text="@{model.addressLineTwo == null ? @string/not_available : model.addressLineTwo  }"
+
+                    android:textSize="@dimen/plantSubDetailValueTextSize"
+
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CITY"
+                    android:textSize="@dimen/plantSubDetailHeadingTextSize"
+                    android:textStyle="bold"
+                    android:textColor="@color/textGray"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/dotted"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layerType="software" />
+
+                <TextView
+                    android:id="@+id/cityTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Banglore"
+                    android:textSize="@dimen/plantSubDetailValueTextSize"
+                    android:text="@{model.city == null ? @string/not_available : model.city  }"
+
+
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STATE"
+                    android:textSize="@dimen/plantSubDetailHeadingTextSize"
+                    android:textStyle="bold"
+                    android:textColor="@color/textGray"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/dotted"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layerType="software" />
+                <TextView
+                    android:id="@+id/stateTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Karnataka"
+                    android:text="@{model.state == null ? @string/not_available : model.state  }"
+
+                    android:textSize="@dimen/plantSubDetailValueTextSize"
+
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PINCODE"
+                    android:textSize="@dimen/plantSubDetailHeadingTextSize"
+                    android:textStyle="bold"
+                    android:textColor="@color/textGray"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/dotted"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layerType="software" />
+
+                <TextView
+                    android:id="@+id/pincodeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="4 Apr 2016"
+                    android:text="@{model.pincode == null ? @string/not_available : model.pincode  }"
+
+                    android:textSize="@dimen/plantSubDetailValueTextSize"
+
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--<fragment-->
+            <!--android:id="@+id/map"-->
+            <!--android:layout_marginStart="@dimen/_8sdp"-->
+            <!--android:layout_marginEnd="@dimen/_8sdp"-->
+            <!--android:name="com.google.android.gms.maps.SupportMapFragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/_100sdp"-->
+            <!--/>-->
+
+
+
+    </LinearLayout>
+
+
+</layout>
